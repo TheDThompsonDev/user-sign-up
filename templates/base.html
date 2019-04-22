@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        .error {
+            color: red;
+        }
+        span p{
+            font-size: 12px;
+        }
+        
+    </style>
+    <title>Sign Up</title>
+</head>
+    <body align="center">
+        <header> 
+            <h1>Hello Launchcode member!</h1>
+            <h1>Please Sign Up:</h1>
+        </header>
+        <span>
+            <p>Please make sure your username and password are between 3-20 characters, 
+                your passwords match and your email is valid.</p>
+        </span>
+
+        <span>
+            <form action="/2" method="POST">
+                <table align="center"> 
+                <tr> 
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td> 
+                        <input type="text" id="username" name="username">
+                        <br>
+                        <span class="error">{{unerror}}</span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td> 
+                    <label for="password"> Password: </label>
+                    </td>
+                    <td>
+                    <input type="password" id=password name="password">
+                    <br>
+                    <span class="error">{{pwerror}}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    <label for="pw_confirm"> Verify Password: </label>
+                    </td>
+                    <td>
+                    <input type="password" id=pw_confirm name="pw_confirm">
+                    <br>
+                    <span class="error">{{pw_match}}</span>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    <label for="email"> Email (optional): </label>
+                    </td>
+                    <td>
+                    <input type="text" id=email name="email">
+                    <span class="error">{{email_error}}</span>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit">Submit</button>
+            </form>
+        </span>
+
+
+    </form>
+
+    </body>
+</html>
